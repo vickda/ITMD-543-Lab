@@ -2,12 +2,33 @@ import React from "react";
 import dusk from "../images/duskdawn.png";
 import sun from "../images/sunrise sunset.jpg";
 
-export default function Card({
+interface SunriseSunsetData {
+  results: {
+    solar_noon: string,
+    day_length: number,
+    timezone: string,
+    sunrise: string,
+    sunset: string,
+    dawn: string,
+    dusk: string,
+  };
+}
+
+interface CardProps {
+  sunriseSunsetData: SunriseSunsetData | null;
+  tomorrowData: string;
+  countryname: string | null;
+  sunriseSunsetDatastat: React.Dispatch<
+    React.SetStateAction<SunriseSunsetData | null>
+  >;
+}
+
+const Card: React.FC<CardProps> = ({
   sunriseSunsetData,
   tomorrowData,
   countryname,
   sunriseSunsetDatastat,
-}) {
+}) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
@@ -37,11 +58,7 @@ export default function Card({
           <div className="flex justify-center">
             <div className="bg-gray-800 rounded-lg p-5 shadow-md text-white mr-4">
               <div className="mb-4">
-                <img
-                  src={sun["src"]}
-                  alt="Sunrise icon"
-                  className="w-20 h-20"
-                />
+                <img src={sun.src} alt="Sunrise icon" className="w-20 h-20" />
               </div>
               <h2 className="text-lg font-semibold mb-2 text-gray-300">
                 Sunrise and Sunset
@@ -55,7 +72,7 @@ export default function Card({
             </div>
             <div className="bg-gray-800 rounded-lg p-5 shadow-md text-white">
               <div className="mb-4">
-                <img src={dusk["src"]} alt="Dawn icon" className="w-20 h-20" />
+                <img src={dusk.src} alt="Dawn icon" className="w-20 h-20" />
               </div>
               <h2 className="text-lg font-semibold mb-2 text-gray-300">
                 Dawn and Dusk
@@ -78,4 +95,6 @@ export default function Card({
       </div>
     </>
   );
-}
+};
+
+export default Card;
