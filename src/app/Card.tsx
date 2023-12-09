@@ -1,6 +1,6 @@
 import React from "react";
-import dusk from "../images/duskdawn.png";
-import sun from "../images/sunrise sunset.jpg";
+import dusk from "./images/duskdawn.png";
+import sun from "./images/sunrise sunset.jpg";
 
 interface SunriseSunsetData {
   results: {
