@@ -7,7 +7,7 @@ import {
   Navigate,
   Link,
 } from "react-router-dom";
-import Card from "./Card/page";
+import { Card } from "./Card/page";
 import React, { useState } from "react";
 
 const SunriseSunsetDashboard = () => {

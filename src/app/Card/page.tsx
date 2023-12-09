@@ -23,7 +23,7 @@ interface CardProps {
   >;
 }
 
-export default function Card({
+export function Card({
   sunriseSunsetData,
   tomorrowData,
   countryname,
