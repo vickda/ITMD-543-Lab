@@ -64,7 +64,7 @@ const SunriseSunsetDashboard = () => {
   ) : (
     <div className="p-5 flex flex-col items-center">
       <header className="bg-gray-800 p-5 text-center text-white mb-8">
-        <h1 className="text-2xl font-bold">ITMD 543 Vicky Das</h1>
+        <h1 className="text-2xl font-bold">Sunrise Sunset Dashboard ITMD 543 Vicky Das</h1>
       </header>
       <div id="location-form" className="flex flex-wrap justify-center items-center mb-8">
         <label htmlFor="location-input" className="mr-3 text-gray-600">Enter Location:</label>
