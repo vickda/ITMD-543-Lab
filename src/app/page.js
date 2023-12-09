@@ -49,16 +49,6 @@ const SunriseSunsetDashboard = () => {
         setTomorrowData(tomorrowData);
 
         // Navigate to the "/card" route
-
-        console.log(sunriseSunsetData, tomorrowData);
-
-        return (
-          <Card
-            sunriseSunsetData={sunriseSunsetData}
-            tomorrowData={tomorrowData}
-            countryname={countryName}
-          />
-        );
       } else {
         throw new Error("Location not found.");
       }
@@ -79,7 +69,6 @@ const SunriseSunsetDashboard = () => {
         {sunriseSunsetData ? (
           <Card
             sunriseSunsetData={sunriseSunsetData}
-            tomorrowData={tomorrowData}
             countryname={countryName}
             sunriseSunsetDatastat={setSunriseSunsetData}
           />

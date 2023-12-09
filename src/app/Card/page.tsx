@@ -25,7 +25,6 @@ interface CardProps {
 
 export function Card({
   sunriseSunsetData,
-  tomorrowData,
   countryname,
   sunriseSunsetDatastat,
 }: CardProps): JSX.Element {
