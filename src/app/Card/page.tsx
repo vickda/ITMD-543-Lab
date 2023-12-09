@@ -4,13 +4,13 @@ import sun from "../images/sunrise sunset.jpg";
 
 interface SunriseSunsetData {
   results: {
-    solar_noon: string,
-    day_length: number,
-    timezone: string,
-    sunrise: string,
-    sunset: string,
-    dawn: string,
-    dusk: string,
+    solar_noon: string;
+    day_length: number;
+    timezone: string;
+    sunrise: string;
+    sunset: string;
+    dawn: string;
+    dusk: string;
   };
 }
 
@@ -23,12 +23,12 @@ interface CardProps {
   >;
 }
 
-const Card: React.FC<CardProps> = ({
+export default function Card({
   sunriseSunsetData,
   tomorrowData,
   countryname,
   sunriseSunsetDatastat,
-}) => {
+}: CardProps): JSX.Element {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen">
@@ -95,6 +95,5 @@ const Card: React.FC<CardProps> = ({
       </div>
     </>
   );
-};
+}
 
-export default Card;
